@@ -1,7 +1,6 @@
 
 {
     "manifest_version": 3,
-    "id": "gh-pr-ext",
     "name": "GitHub PR Check Status",
     "description": "provides better UI for PR check status details",
     "version": "1.0.0",
@@ -15,6 +14,13 @@
         "16": "icon-16.png",
         "48": "icon-48.png",
         "128": "icon-128.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "gh-pr-ext@gmail.com",
+            "strict_min_version": "42.0"
+        }
     }
+
 }
 
