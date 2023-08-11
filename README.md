@@ -6,7 +6,8 @@ A fun little browser extension to add additional UI to the pull request page so 
 
 Find on browser add-on / extension stores.
 
-(availability TBD)
+- [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/github-pr-check-status/)
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/ldddlenkajkonchccpkjapihmdgjgjop)
 
 ## Build
 
