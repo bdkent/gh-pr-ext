@@ -1,0 +1,7 @@
+.root {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    min-width: 32px;
+    min-height: 32px;
+}
