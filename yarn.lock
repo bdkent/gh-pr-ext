@@ -9361,6 +9361,57 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gh-pr-ext@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "gh-pr-ext@workspace:."
+  dependencies:
+    "@babel/core": ^7.18.6
+    "@babel/preset-env": ^7.11.5
+    "@babel/preset-typescript": ^7.10.4
+    "@storybook/addon-essentials": ^6.4.9
+    "@storybook/addon-interactions": ^6.4.9
+    "@storybook/builder-webpack5": ^6.4.9
+    "@storybook/manager-webpack5": ^6.4.9
+    "@storybook/react": ^6.4.9
+    "@storybook/testing-library": ^0.0.7
+    "@types/chrome": ^0.0.124
+    "@types/jest": ^26.0.14
+    "@types/node": ^14.11.8
+    "@types/react": ^17.0.2
+    "@types/react-dom": ^17.0.2
+    "@types/react-test-renderer": ^17.0.1
+    "@types/webextension-polyfill": ^0.9.0
+    "@typescript-eslint/eslint-plugin": ^4.4.1
+    "@typescript-eslint/parser": ^4.4.1
+    autoprefixer: ^10.4.1
+    awesome-typescript-loader: ^5.2.1
+    babel-core: ^6.26.3
+    babel-jest: ^26.5.2
+    babel-loader: ^8.1.0
+    css-loader: ^4.3.0
+    eslint: ^7.11.0
+    eslint-config-prettier: ^6.12.0
+    eslint-plugin-prettier: ^3.1.4
+    eslint-plugin-react: ^7.21.4
+    jest: ^26.5.3
+    jest-css-modules: ^2.1.0
+    postcss: ^8.4.5
+    postcss-loader: ^6.2.1
+    prettier: ^2.1.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-test-renderer: ^17.0.2
+    tailwindcss: ^3.0.8
+    ts-jest: ^26.4.1
+    ts-loader: 9.4.4
+    typescript: 4.9.5
+    webextension-polyfill: ^0.9.0
+    webpack: ^5.76.0
+    webpack-cli: ^4.9.1
+    webpack-merge: ^5.8.0
+  languageName: unknown
+  linkType: soft
+
 "github-slugger@npm:^1.0.0":
   version: 1.4.0
   resolution: "github-slugger@npm:1.4.0"
@@ -14439,57 +14490,6 @@ __metadata:
   checksum: da3d0192825df3d9f27eef33e7eddf928359a7e3e2b01ae7f7f672ecf4e5c1f7a34f27bdde9ccc24e2e9fbe1d1b9dd2a39c7d47323c9bdf63e7b9bd05c325a71
   languageName: node
   linkType: hard
-
-"react-typescript-chrome-extension-starter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-typescript-chrome-extension-starter@workspace:."
-  dependencies:
-    "@babel/core": ^7.18.6
-    "@babel/preset-env": ^7.11.5
-    "@babel/preset-typescript": ^7.10.4
-    "@storybook/addon-essentials": ^6.4.9
-    "@storybook/addon-interactions": ^6.4.9
-    "@storybook/builder-webpack5": ^6.4.9
-    "@storybook/manager-webpack5": ^6.4.9
-    "@storybook/react": ^6.4.9
-    "@storybook/testing-library": ^0.0.7
-    "@types/chrome": ^0.0.124
-    "@types/jest": ^26.0.14
-    "@types/node": ^14.11.8
-    "@types/react": ^17.0.2
-    "@types/react-dom": ^17.0.2
-    "@types/react-test-renderer": ^17.0.1
-    "@types/webextension-polyfill": ^0.9.0
-    "@typescript-eslint/eslint-plugin": ^4.4.1
-    "@typescript-eslint/parser": ^4.4.1
-    autoprefixer: ^10.4.1
-    awesome-typescript-loader: ^5.2.1
-    babel-core: ^6.26.3
-    babel-jest: ^26.5.2
-    babel-loader: ^8.1.0
-    css-loader: ^4.3.0
-    eslint: ^7.11.0
-    eslint-config-prettier: ^6.12.0
-    eslint-plugin-prettier: ^3.1.4
-    eslint-plugin-react: ^7.21.4
-    jest: ^26.5.3
-    jest-css-modules: ^2.1.0
-    postcss: ^8.4.5
-    postcss-loader: ^6.2.1
-    prettier: ^2.1.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-test-renderer: ^17.0.2
-    tailwindcss: ^3.0.8
-    ts-jest: ^26.4.1
-    ts-loader: 9.4.4
-    typescript: 4.9.5
-    webextension-polyfill: ^0.9.0
-    webpack: ^5.76.0
-    webpack-cli: ^4.9.1
-    webpack-merge: ^5.8.0
-  languageName: unknown
-  linkType: soft
 
 "react@npm:^17.0.2":
   version: 17.0.2

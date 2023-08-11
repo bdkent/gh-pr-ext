@@ -14,9 +14,7 @@ export function Overlay(props: Props) {
             onClick={onClose}
         >
             <div
-                className={
-                    'Overlay xOverlay-whenNarrow xOverlay--size-small-portrait Overlay--motion-scaleFade SidePanel'
-                }
+                className={'Overlay Overlay--motion-scaleFade SidePanel'}
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="Overlay-header flex-row">
