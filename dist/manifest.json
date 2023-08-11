@@ -1,6 +1,7 @@
 
 {
     "manifest_version": 3,
+    "id": "gh-pr-ext",
     "name": "GitHub PR Check Status",
     "description": "provides better UI for PR check status details",
     "version": "1.0.0",
