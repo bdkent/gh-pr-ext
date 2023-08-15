@@ -92,11 +92,11 @@ export function InProgressIcon() {
         <svg
             aria-hidden="true"
             aria-label=""
-            width="100%"
-            height="100%"
+            width="16"
+            height="16"
             fill="none"
             viewBox="0 0 16 16"
-            className="anim-rotate"
+            className="anim-rotate v-align-middle"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
