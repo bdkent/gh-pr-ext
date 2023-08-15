@@ -5,10 +5,18 @@ import css from './styles.module.css';
 
 const RootID = 'pr-plus-root';
 
-const elem = document.createElement('div');
-elem.id = RootID;
-elem.className = css.root;
+function initialize() {
+    const elem = document.createElement('div');
+    elem.id = RootID;
+    elem.className = css.root;
 
-document.getElementsByTagName('body')[0].appendChild(elem);
+    document.getElementsByTagName('body')[0].appendChild(elem);
 
-ReactDOM.render(<RootContent />, document.getElementById(RootID));
+    ReactDOM.render(<RootContent />, document.getElementById(RootID));
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+} else {
+    initialize();
+}
