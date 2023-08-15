@@ -7,7 +7,6 @@ export type StatusState =
     | 'pending';
 
 export type StatusItem = {
-    elem: Node;
     status?: StatusState;
     icon?: string;
     message?: string;

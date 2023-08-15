@@ -29,11 +29,12 @@ export function toStatusItem(node: HTMLElement): StatusItem {
 
     const statusIconElem = elem.querySelector(
         '.merge-status-icon',
-    ) as HTMLElement;
+    ) as HTMLElement | null;
     const iconElem = elem.querySelector('a img.avatar');
 
-    const msgElem = iconElem?.parentElement?.nextElementSibling as HTMLElement;
-    const detailsElem = elem.querySelector('div a.status-actions');
+    const msgElem = elem.querySelector(
+        '.css-truncate.css-truncate-target',
+    ) as HTMLElement | null;
 
     const note = msgElem?.innerText
         .replace(msgElem?.querySelector('strong')?.innerText ?? '', '')
@@ -47,9 +48,10 @@ export function toStatusItem(node: HTMLElement): StatusItem {
 
     const path = message?.split(' / ') ?? [];
 
+    const detailsElem = elem.querySelector('div a.status-actions');
+
     return {
-        elem,
-        status: toStatusState(statusIconElem),
+        status: statusIconElem ? toStatusState(statusIconElem) : undefined,
         icon: iconElem?.getAttribute('src') ?? undefined,
         message: message,
         note,
