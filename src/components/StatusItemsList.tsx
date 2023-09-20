@@ -3,17 +3,17 @@ import * as React from 'react';
 import { StatusItem } from '@src/content/types';
 
 type Props = {
-    items: StatusItem[];
+  items: StatusItem[];
 };
 
 export function StatusItemsList(props: Props) {
-    const { items } = props;
+  const { items } = props;
 
-    return (
-        <ul className={'ActionList'}>
-            {items.map((i) => (
-                <StatusItemDetails key={i.message} {...i} />
-            ))}
-        </ul>
-    );
+  return (
+    <ul className={'ActionList'}>
+      {items.map((i) => (
+        <StatusItemDetails key={i.message} {...i} />
+      ))}
+    </ul>
+  );
 }
