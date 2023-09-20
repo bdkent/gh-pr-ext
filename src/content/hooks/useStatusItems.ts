@@ -2,14 +2,16 @@ import { useEffect, useState } from 'react';
 import { StatusItem } from '@src/content/types';
 import { compareStrings, toStatusItem } from '@src/content/utils';
 
-export function useStatusItems() {
+export function useStatusItems(): StatusItem[] | undefined {
   const [items, setItems] = useState<StatusItem[] | undefined>();
 
   useEffect(() => {
     const id = setInterval(() => {
-      const elems = document.querySelectorAll(
-        '.mergeability-details .merge-status-list .merge-status-item',
+      const chart = document.querySelector(
+        '.mergeability-details svg.donut-chart',
       );
+      const list = chart?.closest('.merge-status-list');
+      const elems = list?.querySelectorAll('.merge-status-item') ?? [];
       const newItems = Array.from(elems).map((e) =>
         toStatusItem(e as HTMLElement),
       );
