@@ -1,10 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, MutableRefObject } from 'react';
+import { getBranchActionItem } from '@src/content/utils';
 
 function hasChild(elem: HTMLElement, child: Node) {
   return Array.from(elem.childNodes).some((c) => c === child);
 }
 
-export function useButtonIcon() {
+type UseButtonIconResult = {
+  buttonRef: MutableRefObject<HTMLButtonElement | null>;
+  init: boolean;
+};
+
+export function useButtonIcon(): UseButtonIconResult {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const svgRef = useRef<Node | undefined>();
   const [init, setInit] = useState(false);
@@ -13,11 +19,11 @@ export function useButtonIcon() {
   useEffect(() => {
     const id = setInterval(() => {
       if (buttonRef.current) {
-        const chart = document.querySelector(
-          '.mergeability-details svg.donut-chart',
+        const icon = getBranchActionItem()?.querySelector(
+          '.branch-action-item-icon',
         );
-        if (chart) {
-          const svg = chart.cloneNode(true);
+        if (icon) {
+          const svg = icon.cloneNode(true);
           if (buttonRef.current) {
             if (svgRef.current && hasChild(buttonRef.current, svgRef.current)) {
               buttonRef.current.replaceChild(svg, svgRef.current);

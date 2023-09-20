@@ -1,20 +1,25 @@
 import { useEffect, useState } from 'react';
 import { StatusItem } from '@src/content/types';
-import { compareStrings, toStatusItem } from '@src/content/utils';
+import {
+  compareStrings,
+  getBranchActionItem,
+  toStatusItem,
+} from '@src/content/utils';
+
+function getElems(): Element[] {
+  const list = getBranchActionItem()?.querySelectorAll(
+    '.merge-status-list .merge-status-item',
+  );
+  return Array.from(list ?? []);
+}
 
 export function useStatusItems(): StatusItem[] | undefined {
   const [items, setItems] = useState<StatusItem[] | undefined>();
 
   useEffect(() => {
     const id = setInterval(() => {
-      const chart = document.querySelector(
-        '.mergeability-details svg.donut-chart',
-      );
-      const list = chart?.closest('.merge-status-list');
-      const elems = list?.querySelectorAll('.merge-status-item') ?? [];
-      const newItems = Array.from(elems).map((e) =>
-        toStatusItem(e as HTMLElement),
-      );
+      const elems = getElems();
+      const newItems = elems.map((e) => toStatusItem(e as HTMLElement));
       newItems.sort(({ message: a = '' }, { message: b = '' }) => {
         return compareStrings(a, b);
       });

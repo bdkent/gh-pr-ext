@@ -1,5 +1,15 @@
 import { StatusItem, StatusState } from '@src/content/types';
 
+export function getBranchActionItem() {
+  const toggles = document.querySelectorAll(
+    '.mergeability-details .statuses-toggle-opened',
+  );
+  const hideAllChecks = Array.from(toggles).find(
+    (t) => t instanceof HTMLElement && t.innerText === 'Hide all checks',
+  );
+  return hideAllChecks?.closest('.branch-action-item');
+}
+
 export function toStatusState(elem: HTMLElement): StatusState | undefined {
   try {
     if (elem.querySelector('svg.octicon-check')) {
