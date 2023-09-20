@@ -10,7 +10,7 @@ export function toStatusState(elem: HTMLElement): StatusState | undefined {
             return 'skip';
         } else if (elem.querySelector('svg.octicon-dot-fill')) {
             return 'pending';
-        } else if (elem.querySelector('svg[title="in_progress_icon"]')) {
+        } else if (elem.querySelector('svg.anim-rotate')) {
             return 'progress';
         } else if (elem.querySelector('svg.octicon-x')) {
             return 'failing';
