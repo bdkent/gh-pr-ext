@@ -1,4 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
+
+function hasChild(elem: HTMLElement, child: Node) {
+    return Array.from(elem.childNodes).some((c) => c === child);
+}
 
 export function useButtonIcon() {
     const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -10,20 +14,29 @@ export function useButtonIcon() {
         const id = setInterval(() => {
             if (buttonRef.current) {
                 const chart = document.querySelector(
-                    ".mergeability-details svg.donut-chart",
+                    '.mergeability-details svg.donut-chart',
                 );
                 if (chart) {
                     const svg = chart.cloneNode(true);
-                    if (svgRef.current) {
-                        buttonRef.current?.replaceChild(svg, svgRef.current);
-                    } else {
-                        buttonRef.current?.appendChild(svg);
+                    if (buttonRef.current) {
+                        if (
+                            svgRef.current &&
+                            hasChild(buttonRef.current, svgRef.current)
+                        ) {
+                            buttonRef.current.replaceChild(svg, svgRef.current);
+                        } else {
+                            buttonRef.current.appendChild(svg);
+                        }
                     }
                     svgRef.current = svg;
                     setInit(true);
                 } else {
-                    if (svgRef.current) {
-                        buttonRef.current?.removeChild(svgRef.current);
+                    if (
+                        svgRef.current &&
+                        buttonRef.current &&
+                        hasChild(buttonRef.current, svgRef.current)
+                    ) {
+                        buttonRef.current.removeChild(svgRef.current);
                     }
                 }
             }
