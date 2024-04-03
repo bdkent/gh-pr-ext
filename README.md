@@ -12,7 +12,8 @@ Click the icon to open the overlay!
 
 ## Support
 
-Enjoying the extension? Perhaps you could leave a review on extension store or [buy me a coffee](https://www.buymeacoffee.com/bdkent) :coffee: to say thanks?
+Enjoying the extension? Perhaps you could leave a review on the extension store or [buy me a coffee](https://ko-fi.com/bdkent
+) :coffee: to say thanks?
 
 ## Install
 
