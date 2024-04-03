@@ -10,6 +10,9 @@ Click the icon to open the overlay!
 <img width="640" alt="Screenshot 2023-08-11 at 1 05 53 PM" src="https://github.com/bdkent/gh-pr-ext/assets/3629629/9bb56d64-2b31-4100-96f5-5ed70afdf990">
 
 
+## Support
+
+Enjoying the extension? Perhaps you could leave a review on extension store or [buy me a coffee](https://www.buymeacoffee.com/bdkent) :coffee: to say thanks?
 
 ## Install
 
